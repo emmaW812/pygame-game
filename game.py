@@ -1,5 +1,5 @@
 import pygame
-
+import pymunk
 from pygame.locals import *
 
 class Fruits():
@@ -14,8 +14,15 @@ class Fruits():
 pygame.init()
 HEIGHT = 500
 WIDTH = 500
-GRAVITY = -9.8
-FramePerSec = pygame.time.Clock()
+GRAVITY = 2000
+DAMPING = 0.8
+BIAS = 0.00001
 RADII = [17, 25, 32, 38, 50, 63, 75, 87, 100, 115, 135]
 displaysurface = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Game")
+clock = pygame.time.Clock()
+pygame.font.init()
+
+space = pymunk.Space()
+space.gravity = (0, GRAVITY)
+
