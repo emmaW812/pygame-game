@@ -19,6 +19,3 @@ FramePerSec = pygame.time.Clock()
 RADII = [17, 25, 32, 38, 50, 63, 75, 87, 100, 115, 135]
 displaysurface = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Game")
-import pygame.examples.aliens as aliens
-
-print("asdfasdf")
